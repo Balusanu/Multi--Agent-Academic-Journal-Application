@@ -46,26 +46,7 @@ Given an academic topic, the system:
 ## 🏗️ System Architecture
 
 
-User
-↓
-Streamlit Frontend
-↓
-FastAPI Backend
-↓
-LangGraph Orchestrator
-↓
-Parallel AI Agents
-├── Wikipedia Agent
-├── Research Paper Agent (ArXiv)
-└── News Agent (Tavily)
-↓
-Synthesizer Agent
-↓
-Formatter Agent
-↓
-Academic Journal Output
-↓
-LangSmith Monitoring & Evaluation
+![alt text](image-1.png)
 
 
 ---
@@ -88,26 +69,6 @@ LangSmith Monitoring & Evaluation
 - Academic formatting
 
 ---
-
-## LangGraph Garph diagram
-
-![alt text](image.png)
-
----
-
-graph TD
-    User query --> Streamlit Frontend
-    Streamlit frontend --> FastAPI Backend
-    FastAPI backend --> Parallel AI Agents
-    Parallel AI Agents --> wikipedia_worker
-    Parallel AI Agents --> research_worker
-    Parallel AI Agents --> news_worker
-    wikipedia_worker --> synthesizer
-    research_worker --> synthesizer
-    news_worker --> synthesizer
-    synthesizer --> formatter
-    formatter --> Academic Journal Output
-    Academic Journal Output --> LangSmith Monitoring & Evaluation
 
 ## ⚙️ Tech Stack
 
