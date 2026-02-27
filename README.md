@@ -95,6 +95,20 @@ LangSmith Monitoring & Evaluation
 
 ---
 
+graph TD
+    User query --> Streamlit Frontend
+    Streamlit frontend --> FastAPI Backend
+    FastAPI backend --> Parallel AI Agents
+    Parallel AI Agents --> wikipedia_worker
+    Parallel AI Agents --> research_worker
+    Parallel AI Agents --> news_worker
+    wikipedia_worker --> synthesizer
+    research_worker --> synthesizer
+    news_worker --> synthesizer
+    synthesizer --> formatter
+    formatter --> Academic Journal Output
+    Academic Journal Output --> LangSmith Monitoring & Evaluation
+
 ## ⚙️ Tech Stack
 
 ### AI Frameworks
